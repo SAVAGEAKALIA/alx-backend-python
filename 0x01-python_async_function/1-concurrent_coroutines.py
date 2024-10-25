@@ -13,14 +13,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     for i in range(n):
         delay = await asyncio.gather(wait_random(max_delay))
         async_list.extend(delay)
-        # delay = wait_random(max_delay)
-        # async_list.append(max_delay)
-        # for m in range(len(async_list)):
-        #     for n in range(m+1, len(async_list)):
-        #         if async_list[m] > async_list[n]:
-        #             async_list[m], async_list[n] = async_list[n], async_list[m]
-        #             print(f"Swapped {async_list[m]} and {async_list[n]}")
-    # delay = await asyncio.gather(wait_random(async_list[0:2]))
+
     for m in range(len(async_list)):
         for n in range(m + 1, len(async_list)):
             if async_list[m] > async_list[n]:
