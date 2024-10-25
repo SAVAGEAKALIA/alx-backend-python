@@ -3,12 +3,14 @@
 from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Zooms a given array by a given factor.
 
     Args:
-        lst (Tuple[int,...]): The input array."""
+        lst (Tuple[int,...]): The input array.
+        :param lst:
+        :param factor: """
     zoomed_in: List[int] = [
         item for item in lst
         for i in range(factor)
